@@ -16,9 +16,9 @@ const Approach = () => {
             */}
             <section className="container mx-auto py-16 md:py-24 lg:py-32 mt-20 md:mt-0">
 
-            <h1 className="text-center font-quantico text-4xl md:text-5xl font-bold mb-10 ">
+            <h1 className="text-center font-quantico text-5xl md:text-6xl font-bold mb-10 ">
 
-            CORE <br /> <span className="text-4xl md:text-5xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-quantico"> VALUES </span> 
+            CORE <br /> <span className="text-5xl md:text-6xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent font-quantico"> VALUES </span> 
      </h1>
 
                 
@@ -138,17 +138,13 @@ const Card = ({
 
 // AceternityIcon and Icon components remain the same
 
-export const AceternityIcon = ({ order }: { order?: string }) => { /* ... as before ... */ 
+export const AceternityIcon = ({ order }: { order?: string }) => {
     return (
-        <div>
-            <button
-                className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                <span
-                    className="absolute inset-0 animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] rounded-full"/>
-                <span
-                    className=" text-2xl font-bold font-quantico inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-white backdrop-blur-3xl">
-   {order}
-  </span>
+        <div className="relative">
+            <button className="relative inline-flex h-12 w-auto min-w-[120px] items-center justify-center rounded-full bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600 p-[2px] text-2xl font-bold font-quantico text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <span className="flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-5 py-2 backdrop-blur-3xl">
+                    {order}
+                </span>
             </button>
         </div>
     );
