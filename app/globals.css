@@ -231,6 +231,28 @@ p.varela-round-regular {
         @apply bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-md;
       }
     
+    /* Seamless fade from hero into header */
+    .mask-top-fade {
+        /* Fade the top ~96px to transparent so content blends into header */
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) calc(100% - 96px), rgba(0,0,0,0) 100%);
+                mask-image: linear-gradient(to top, rgba(0,0,0,1) calc(100% - 96px), rgba(0,0,0,0) 100%);
+        mask-mode: alpha;
+    }
+
+    /* Glassmorphism navbar base look */
+    .glass-nav {
+        background: rgba(7, 19, 45, 0.35); /* cosmic navy with transparency */
+        -webkit-backdrop-filter: blur(10px) saturate(160%);
+                backdrop-filter: blur(10px) saturate(160%);
+        border: 1px solid rgba(125, 211, 252, 0.15); /* sky-300 */
+        box-shadow: 0 8px 32px rgba(12, 74, 110, 0.18), 0 2px 8px rgba(12, 74, 110, 0.12), 0 0 0 1px rgba(125,211,252,0.06);
+    }
+
+    /* Readability against bright particles */
+    .text-soft-shadow {
+        text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+    }
+    
     .text-gradient-magenta {
         background: linear-gradient(90deg, #FFE08E 0%, #FF9C3B 50%, #FF2AA9 100%);
         -webkit-background-clip: text;

@@ -22,7 +22,7 @@ const Hero = () => {
         />
       )}
       
-      <section id="Hero" className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <section id="Hero" className={`transition-opacity duration-500 mask-top-fade ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <AuroraBackground className="relative min-h-screen flex flex-col justify-center items-center pt-20 md:pt-36">
         
           <Spotlight />
