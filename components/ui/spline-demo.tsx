@@ -9,7 +9,7 @@ import { NavbarButton } from "@/components/ui/resizable-navbar"
 
 export function SplineSceneBasic() {
   const [titlesVisible, setTitlesVisible] = useState(true)
-  const [counter, setCounter] = useState(5)
+  const [counter, setCounter] = useState(2)
   const [showButton, setShowButton] = useState(false)
   const [splineInteractive, setSplineInteractive] = useState(false)
   const [countdownStarted, setCountdownStarted] = useState(false)

@@ -43,7 +43,7 @@ export const gridItems = [
     imgClassName: "opacity-10 blur-sm",
     titleClassName: "justify-start text-justify-start font-bold text-2xl",
     img: "/grid.svg",
-    spareImg: "/b4.svg",
+    spareImg: "",
   },
   {
     id: 5,
@@ -52,8 +52,8 @@ export const gridItems = [
     className: "md:col-span-3 lg:col-span-3 md:row-span-1 lg:row-span-1",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60 opacity-95 blur-sm",
     titleClassName: "justify-start text-justify-start font-bold text-2xl",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
+    img: "/fm.svg",
+    spareImg: "/footer-grid.svg",
   },
 ];
 
