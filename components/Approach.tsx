@@ -2,6 +2,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
+import IntelligenceAssessment from "./IntelligenceAssessment";
 
 const Approach = () => {
     return (
@@ -67,6 +68,11 @@ const Approach = () => {
                         />
                     </Card>
                 </div>
+            </section>
+
+            {/* Intelligence Assessment Section */}
+            <section className="mt-20">
+                <IntelligenceAssessment />
             </section>
         </>
     );
