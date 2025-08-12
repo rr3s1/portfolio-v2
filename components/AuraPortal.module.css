@@ -1,0 +1,119 @@
+.auraPortal {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  background-color: bg-transparent;
+
+}
+
+.fadeCircle {
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 40%, /* Adjust this percentage to control the solid center size */
+    rgba(0, 0, 0, 0) 60%  /* Adjust this percentage to control the fade extent */
+  );
+  mask-mode: alpha;
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 0) 55%
+  );
+  /* No need for position: relative here unless specifically required
+     by complex child positioning that needs to be affected by the mask's bounds,
+     but the .auraPortal already has position: relative. */
+}
+
+.auraPortal:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  width: 150%;
+  height: 140%;
+  background: radial-gradient(ellipse at 50% 55%, transparent 10%, black 50%);
+  transform: translate3d(-50%, -50%, 0);
+  content: "";
+}
+
+.auraPortal:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at 50% 75%,
+    #a900ff 20%,
+    transparent 75%
+  );
+  mix-blend-mode: overlay;
+  transform: translate3d(-50%, -50%, 0);
+  content: "";
+}
+
+@keyframes aura-glow {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 300%;
+  }
+}
+
+.aura {
+  position: absolute;
+  top: -71.5%;
+  left: 50%;
+  z-index: 3;
+  width: 30%;
+  height: 140%;
+  background: linear-gradient(
+      20deg,
+      #00f8f1,
+      #ffbd1e20 16.5%,
+      #fe848f 33%,
+      #fe848f20 49.5%,
+      #00f8f1 66%,
+      #00f8f160 85.5%,
+      #ffbd1e 100%
+    )
+    0 100% / 100% 200%;
+  border-radius: 0 0 100% 100%;
+  filter: blur(50px);
+  mix-blend-mode: plus-lighter;
+  opacity: 0.75;
+  transform: translate3d(-50%, 0, 0);
+  animation: aura-glow 5s infinite linear;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 1px,
+    white 1px,
+    white 2px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+.jsCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+} 

@@ -1,0 +1,308 @@
+/* Fonts are loaded via Next.js font optimization */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Define the background color using a CSS variable */
+  --page-background-color: #00001a; /* Initial cosmic deep blue */
+  
+  /* Apply the background color */
+  background-color: var(--page-background-color);
+  
+  /* This is the key for the smooth transition! */
+  transition: background-color 0.8s ease-in-out;
+}
+
+@layer base {
+    :root {
+        /* --background: 205 74% 14% / 0.76;  */
+        --background: 207 95% 4.3% / 0.79;
+        --foreground: 0 0% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+
+        --radius: 0.5rem;
+        
+        /* Custom color scheme */
+        --navy-900: #060718;
+        --navy-800: #0f132a;
+        --white-100: #ffffff;
+        --white-200: #EAEAF0;
+        --gray-400: #606575;
+        --magenta-500: #ff2aa9;
+        --magenta-400: #ff2d96;
+        --orange-400: #ff9c3b;
+        --orange-300: #ffa73c;
+        --yellow-300: #ffd54f;
+        --yellow-200: #ffe480;
+        --cyan-400: #14d5ff;
+        --cyan-300: #00cfff;
+        
+        /* Gradients */
+        --grad-primary: linear-gradient(90deg, #ff8a38 0%, #14d5ff 100%);
+        --grad-accent: linear-gradient(90deg, #ff9c3b 0%, #ff2aa9 100%);
+        --grad-gold: linear-gradient(90deg, #ffe480 0%, #ffa73c 100%);
+        --grad-magenta: linear-gradient(90deg, #ffe08e 0%, #ff9c3b 50%, #ff2aa9 100%);
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+
+        /* Font families */
+        --font-title: 'Quantico', sans-serif;
+        --font-body: 'Manrope', Arial, sans-serif;
+         --font-quantico: 'Quantico', sans-serif;
+        
+        --color-1: 330 100% 40%; /* Dark Neon Pink */
+        --color-2: 140 100% 55%; /* Bright Electric Green */
+        --color-3: 210 100% 30%; /* Deep Neon Blue */
+        --color-4: 60 100% 70%;  /* Light Neon Yellow */
+        --color-5: 295 100% 45%; /* Dark Neon Purple */
+        --brand: 50 100% 50%;    /* Bright, punchy yellow */
+    }
+
+    .dark {
+        /* --background: 205 74% 14% / 0.76; */
+        --background: 207 95% 4.3% / 0.79;
+        --foreground: 0 0% 98%;
+
+        --card: 0 0% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 0 0% 98%;    
+        --primary-foreground: 0 0% 9%;
+
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+        --ring: 0 0% 83.1%;
+        
+        /* Override dark theme with our custom cosmic theme */
+        --background: 207, 95%, 8%;
+        --foreground: var(--navy-900);
+        
+        --card: var(--navy-800);
+        --card-foreground: var(--white-200);
+        
+        --accent: var(--magenta-500);
+        --accent-foreground: var(--white-100);
+        
+        --primary: var(--cyan-400);
+        --primary-foreground: var(--white-100);
+        
+        --secondary: var(--yellow-300);
+        --secondary-foreground: var(--navy-900);
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+        
+        --color-1: 330 100% 40%; /* Dark Neon Pink */
+        --color-2: 140 100% 55%; /* Bright Electric Green */
+        --color-3: 210 100% 30%; /* Deep Neon Blue */
+        --color-4: 60 100% 70%;  /* Light Neon Yellow */
+        --color-5: 295 100% 45%; /* Dark Neon Purple */
+        --brand: 50 100% 50%;    /* Bright, punchy yellow */
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border scroll-smooth;
+        font-family: var(--font-body);
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: var(--font-body);
+    }
+    button {
+        @apply active:outline-none;
+    }
+    h1, h2, h3, h4, h5, h6, .heading {
+        font-family: var(--font-title);
+        font-weight: 900;
+        font-style: normal;
+        font-optical-sizing: auto;
+        letter-spacing: 0.01em;
+        text-transform: none;
+    }
+    p, li, span, a, input, textarea {
+        font-family: var(--font-body);
+    }
+}
+
+/* Varela Round regular */
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Example usage: apply to paragraphs */
+p.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+}
+.fade-circle{
+    /* Make the video the mask’s “source” */
+    mask-image: radial-gradient(
+        circle at 50% 50%,          /* centre */
+        rgba(0,0,0,1)   0%,         /* fully visible in the centre   */
+        rgba(0,0,0,1)  40%,         /* stay visible for a bit        */
+        rgba(0,0,0,0)  75%          /* fade to transparent by edge   */
+    );
+   mask-mode: alpha;               /* use the alpha channel         */
+    -webkit-mask-image: radial-gradient(circle at 46% 46%,
+        rgba(0,0,0,1) 0%, rgba(0,0,0,1) 47%, rgba(0,0,0,0) 60%);
+  }
+@layer utilities {
+    .heading {
+        @apply font-bold text-4xl md:text-5xl text-center;
+    }
+
+    .black-gradient {
+        background: linear-gradient(90deg, #10152B 0%, #060718 100%);
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(90deg, #FF8A38 0%, #14D5FF 100%);
+    }
+    
+    .accent-gradient {
+        background: linear-gradient(90deg, #FF9C3B 0%, #FF2AA9 100%);
+    }
+    
+    .text-gradient-gold {
+        background: linear-gradient(90deg, #FFE480 0%, #FFA73C 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    .bg-main-gradient {
+        @apply bg-gradient-to-r from-purple-900/20 to-pink-900/20 backdrop-blur-md;
+      }
+    
+    .text-gradient-magenta {
+        background: linear-gradient(90deg, #FFE08E 0%, #FF9C3B 50%, #FF2AA9 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    
+    .border-gradient {
+        border: 1px solid transparent;
+        background-clip: padding-box;
+        position: relative;
+    }
+    
+    .border-gradient::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(45deg, #FF8A38, #14D5FF);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+}
+
+.quantico-regular {
+  font-family: var(--font-quantico), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quantico-bold {
+  font-family: var(--font-quantico), sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.quantico-regular-italic {
+  font-family: var(--font-quantico), sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.quantico-bold-italic {
+  font-family: var(--font-quantico), sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+div.Scrollcontrols::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  #Hero {
+  scroll-margin-top: 80px; /* Adjust this value to your navbar's height */
+}
+
+  
+  #Contact {
+    scroll-margin-bottom: 80px; /* Adjust this value to your navbar's height */
+  }
+
+
+  .origin-center { transform-origin: center center; }
