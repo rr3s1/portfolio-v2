@@ -5,7 +5,7 @@ export default function TimelineDemo() {
   const data = [
     {
       title: (
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]" id="projects">Portfolio v1</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]" id="projects">Portfolio v2</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -14,7 +14,7 @@ export default function TimelineDemo() {
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
-              href="https://portfolio-nine-lime-35.vercel.app/"
+              href="https://portfolio-v2-ashy-theta.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-emerald-400 border border-emerald-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(52,211,153,0.25)] hover:bg-emerald-300/10 hover:border-emerald-300/70 hover:shadow-[0_0_16px_rgba(52,211,153,0.45)] focus:outline-none focus:ring-2 focus:ring-emerald-400/40 transition-all duration-300 transform hover:-translate-y-0.5"
@@ -22,7 +22,7 @@ export default function TimelineDemo() {
               Live Demo
             </a>
             <a
-              href="https://github.com/rr3s1/portfolio/"
+              href="https://github.com/rr3s1/portfolio-v2"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-sky-200 border border-sky-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(56,189,248,0.25)] hover:bg-sky-300/10 hover:border-sky-300/70 hover:shadow-[0_0_16px_rgba(56,189,248,0.45)] focus:outline-none focus:ring-2 focus:ring-orange-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
@@ -40,7 +40,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A comprehensive, full-stack beauty clinic management system with appointment scheduling and an admin dashboard.
+            Full-stack beauty clinic management system with appointment scheduling and admin dashboard.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -70,7 +70,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            An AI-powered platform for interviews preparation, featuring Vapi AI voice agent and feedback from Gemini AI.
+            AI-powered platform for interviews preparation, featuring Vapi AI voice agent and Gemini AI feedback.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -100,7 +100,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A smart, AI-driven application that evaluates resumes against job listings, providing ATS scores and tailored feedback.
+            High-level AI-driven application that evaluates resumes against job listings, providing ATS scores and tailored feedback.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -130,7 +130,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Designed to streamline appointment booking, marketing of services and client testimonials using React 19, Spline 3D and GSAP Animations.
+            Ultra modern hair salon landing page designed to streamline appointment booking, marketing of services and client testimonials using React 19, Spline 3D and GSAP Animations.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -160,7 +160,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A visually stunning, scroll-driven website showcasing advanced GSAP animations, parallax effects and video-syncing.
+            A visually scroll-driven website showcasing advanced GSAP animations, parallax effects and video-syncing.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -220,7 +220,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A web app for browsing trending movies, searching titles, and exploring content using the TMDB API.
+            A web app for browsing trending movies, searching titles and exploring content using the TMDB API.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -365,12 +365,12 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Apple iPhone</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">3D Apple iPhone</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A showcase of an Apple-style product page featuring advanced 3D models, smooth animations and a polished, modern interface.
+            A 3D showcase of an Apple-style product page featuring advanced 3D models, smooth animations and a polished, modern interface.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
