@@ -38,9 +38,8 @@ export const FloatingNav = ({
           <NavbarButton
             as="a"
             href="#contact"
-           
-            variant="primary"
-            className="bg-slate-300 font-semibold tracking-wider"
+            variant="ghost"
+            className="font-semibold"
           >
             CONTACT
           </NavbarButton>
@@ -78,7 +77,7 @@ export const FloatingNav = ({
               onClick={() => setIsMobileMenuOpen(false)}
               as="a"
               href="#contact"
-              variant="primary"
+              variant="ghost"
               className="w-full"
             >
               Contact
