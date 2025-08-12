@@ -12,7 +12,7 @@ import { InfiniteMovingCards } from './ui/InfiniteMovingCards';
 const Techstack = () => {
     return (
         <div className="py-20" id="techstack">
-            <h1 className="text-center text-4xl md:text-5xl font-bold mb-10 font-quantico">
+            <h1 className="text-center text-4xl md:text-5xl font-bold mb-10 font-quantico bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">
 
         TECH <span className="font-quantico text-4xl md:text-5xl bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> STACK </span> 
              </h1>

@@ -74,7 +74,7 @@ const TextRotator = ({
     return (
         <span className={cn(
             "relative inline-block min-w-[250px] min-h-[1.5em] font-quantico font-bold",
-            !letterAnimation && textGradient && "bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+            !letterAnimation && textGradient && " bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
             className
         )}
         style={{ fontFamily: "var(--font-quantico) !important" }}

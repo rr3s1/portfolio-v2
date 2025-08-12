@@ -117,7 +117,7 @@ export const Header = () => {
         p:  md:text-2xl (1.5rem / 24px)
         Ratio: 3 / 1.5 = 2x
     */}
-    <h1 className="text-4xl md:text-6xl font-bold font-quantico bg-gradient-to-r tracking-widest bg:text-white">
+    <h1 className="text-4xl md:text-6xl font-bold font-quantico bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9] tracking-widest">
        EXPLORING  <br />  <span className="text-5xl md:text-6xl font-bold bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent">
       MODERN DESIGNS
     </span>

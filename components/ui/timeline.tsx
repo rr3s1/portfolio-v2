@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto pt-20 px-4 md:px-8 lg:px-10">
 
-      <h1 className="text-center text-5xl md:text-6xl font-quantico font-bold mb-10 ">
+      <h1 className="text-center text-5xl md:text-6xl font-quantico bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9] mb-10 ">
 
       RECENT <br/> <span className="text-5xl md:text-6xl bg-gradient-to-r font-quantico from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS </span> 
      </h1>

@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex flex-col items-center z-10 relative mt-20 ">
                 <h1 className="heading text-2xl lg:max-w-[45vw] text-white drop-shadow-md"><span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> UPGRADE </span>
                 
-                <span className="text-sky-400 font-quantico"> YOUR
+                <span className="text-sky-400 font-quantico bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]"> YOUR
                 </span>
                  <span className="bg-gradient-to-r from-[#fde047] via-[#f472b6] to-[#a855f7] bg-clip-text text-transparent"> PROJECTS
                      </span>

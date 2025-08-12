@@ -5,7 +5,7 @@ export default function TimelineDemo() {
   const data = [
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent" id="projects">Portfolio v1</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]" id="projects">Portfolio v1</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -35,7 +35,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">Aura Aesthetics</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Aura Aesthetics</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -65,7 +65,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">AI PrepWise</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">AI PrepWise</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -95,7 +95,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">AI ResuMind</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">AI ResuMind</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -125,7 +125,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">Prestige Hair Salon</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Prestige Hair Salon</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -155,7 +155,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">Cocktails GSAP</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Cocktails GSAP</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -185,7 +185,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">FoodDelivery Mobile</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">FoodDelivery Mobile</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -215,7 +215,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">TMDB Moviese Mobile</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">TMDB Moviese Mobile</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -245,7 +245,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">BookWise Library</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">BookWise Library</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -275,7 +275,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">RealEstate Mobile</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">RealEstate Mobile</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -305,7 +305,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">Healthcare Management</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Healthcare Management</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -335,7 +335,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">FileStorage System</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">FileStorage System</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -365,7 +365,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">Apple iPhone</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Apple iPhone</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -395,7 +395,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">Zentry Awwwards</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Zentry Awwwards</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -425,7 +425,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">Next.js Portfolio</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Next.js Portfolio</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -455,7 +455,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">SaaS Xora Modern UI/UX</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">SaaS Xora Modern UI/UX</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
@@ -485,7 +485,7 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="text-gradient-magenta bg-clip-text text-transparent">3D Portfolio</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">3D Portfolio</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">

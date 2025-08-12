@@ -20,7 +20,7 @@ function GradientText({
   return (
     <motion.span
       className={cn(
-        "relative inline-flex overflow-hidden font-quantico font-bold bg-white dark:bg-slate-900 rounded-xl",
+        "relative inline-flex overflow-hidden font-quantico font-bold bg-white dark:bg-black rounded-xl",
         className,
       )}
       {...props}
