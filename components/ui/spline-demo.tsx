@@ -2,10 +2,10 @@
 
 import { SplineScene } from "@/components/ui/spline"
 import  TextRotator from "./classy-hero"
-
 import React, { useState, useEffect, useRef, useCallback } from "react"
 import { GradientTextDemo } from "./gradient-demo"
 import { gsap } from "gsap"
+import { NavbarButton } from "@/components/ui/resizable-navbar"
 
 export function SplineSceneBasic() {
   const [titlesVisible, setTitlesVisible] = useState(true)
@@ -253,7 +253,7 @@ export function SplineSceneBasic() {
           <div className="absolute left-1/2 -translate-x-1/2 z-30" style={{ top: '5%' }}>
             <div 
               ref={counterRef}
-              className={`bg-transparent rounded-full w-20 h-20 flex items-center justify-center transition-all duration-300 ${getCounterColor(counter).bg} ${getCounterColor(counter).border} border-2`}
+              className={`rounded-full w-20 h-20 flex items-center justify-center transition-all duration-300 bg-transparent border-2 ${getCounterColor(counter).border} shadow-[0_0_12px_rgba(56,189,248,0.35)]`}
             >
               <span className={`text-3xl font-bold font-quantico ${getCounterColor(counter).text}`}>
                 {counter}
@@ -265,12 +265,14 @@ export function SplineSceneBasic() {
         {/* Toggle Text Button - Show/Hide functionality */}
         {showButton && (
           <div className="absolute left-1/2 -translate-x-1/2 z-30" style={{ top: '5%' }}>
-            <button
+            <NavbarButton
+              as="button"
               onClick={toggleTitles}
-              className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-full font-quantico font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/30"
+              variant="ghost"
+              className="px-8 py-4 text-lg font-quantico"
             >
-            {titlesVisible ? 'Enter Interaction' : 'Exit Interaction'}
-            </button>
+              {titlesVisible ? 'Enter Interaction' : 'Exit Interaction'}
+            </NavbarButton>
           </div>
         )}
 
