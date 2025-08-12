@@ -20,7 +20,7 @@ export const gridItems = [
     title: "ABOUT ME",
     description: "Hi there! I am a Full-Stack Developer focused on building modern web & mobile apps by using React, Next.js and React Native with a high interest in creating clean, performant and visually appealing UI's.",
     className: "md:col-span-2 lg:col-span-2 md:row-span-2 lg:row-span-2 justify-start text-justify-start text-2xl",
-    imgClassName: "absolute left-8 top-8 md:w-96 w-60 opacity-75  contrast-55 rounded-2xl",
+    imgClassName: "hidden sm:block absolute left-8 top-8 md:w-96 w-60 opacity-75 contrast-55 rounded-2xl",
     titleClassName: "justify-start text-justify-start font-bold text-2xl",
     img: "/DataRef12.png",
     spareImg: "",

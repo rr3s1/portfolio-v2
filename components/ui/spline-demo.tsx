@@ -291,12 +291,22 @@ export function SplineSceneBasic() {
             className="w-full h-full"
             priority={true}
           />
-          {/* Enhanced gradient mask overlay */}
+          {/* Enhanced gradient mask overlay - Bottom */}
           <div
             className="absolute left-0 bottom-0 w-full"
             style={{
               height: '150px',
               background: 'linear-gradient(to top, rgba(0, 0, 26, 1) 0%, rgba(0, 0, 26, 0.9) 30%, rgba(0, 0, 26, 0.7) 60%, transparent 100%)',
+              pointerEvents: 'none',
+              zIndex: 5,
+            }}
+          />
+          {/* Enhanced gradient mask overlay - Top */}
+          <div
+            className="absolute left-0 top-0 w-full"
+            style={{
+              height: '200px',
+              background: 'linear-gradient(to bottom, rgba(0, 0, 26, 1) 0%, rgba(0, 0, 26, 0.9) 25%, rgba(0, 0, 26, 0.7) 50%, rgba(0, 0, 26, 0.4) 75%, transparent 100%)',
               pointerEvents: 'none',
               zIndex: 5,
             }}
