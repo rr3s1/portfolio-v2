@@ -188,7 +188,7 @@ export function SplineSceneBasic() {
   //   }, []);
 
   return (
-    <div ref={containerRef} className="w-full h-screen relative overflow-hidden">
+    <div ref={containerRef} className="w-full h-screen relative overflow-hidden pt-20 md:pt-24">
       <div className="flex flex-col md:flex-row h-full relative">
         {/* Hero Titles - Conditional visibility */}
         <div 
