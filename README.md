@@ -11,7 +11,7 @@
 <br/>  <br/>  
   <h1 align="center">Modern Developer Portfolio</h1>
   <h1 align="center ">
-     <a href="https://portfolio-v2-ashy-theta.vercel.app/" target="_blank">Demo</a>
+     <a href="https://portfolio-nine-lime-35.vercel.app/" target="_blank">Demo</a>
 </h1> <br/>
   <p align="center">
     A Modern Portfolio Landing Page developed by combining efficient code with engaging visuals using
@@ -73,8 +73,8 @@ Make sure you have the following installed:
 ###  Clone the Repo
 
 ```bash
-git clone https://github.com/rr3s1/portfolio-v2.git
-cd portfolio-v2
+git clone https://github.com/rr3s1/portfolio.git
+cd portfolio
 ```
 
 ### Install Dependencies
