@@ -176,7 +176,7 @@ export function SplineSceneBasic() {
               onClick={toggleTitles}
               className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-full font-quantico font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/30"
             >
-              {titlesVisible ? 'Hide Text' : 'Show Text'}
+              {titlesVisible ? 'Free View Interaction' : 'Show information'}
             </button>
           </div>
         )}
