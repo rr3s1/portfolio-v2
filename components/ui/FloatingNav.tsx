@@ -10,7 +10,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const FloatingNav = ({
   navItems,
@@ -24,9 +24,20 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showOnScroll, setShowOnScroll] = useState(true);
+
+  // Ensure visibility on mount (always on top from start)
+  useEffect(() => {
+    setShowOnScroll(true);
+  }, []);
 
   return (
-    <Navbar className={className}>
+    <Navbar
+      className={`${className ?? ""} !fixed !top-0 !inset-x-0 !z-[9999]
+        w-full transition-all duration-500 ease-out
+        ${showOnScroll ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-100 translate-y-0 pointer-events-auto"}
+      `}
+    >
       {/* Desktop Navigation */}
      
       <NavBody>

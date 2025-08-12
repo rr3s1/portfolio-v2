@@ -271,7 +271,7 @@ export function SplineSceneBasic() {
               variant="ghost"
               className="px-8 py-4 text-lg font-quantico"
             >
-              {titlesVisible ? 'Enter Interaction' : 'Exit Interaction'}
+              {titlesVisible ? 'TEXT OFF' : 'TEXT ON'}
             </NavbarButton>
           </div>
         )}
