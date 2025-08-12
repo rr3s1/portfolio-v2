@@ -1,0 +1,84 @@
+/* components/CosmicFilaments.module.css */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background-color: hsl(var(--background));
+    overflow: hidden;
+    /* cursor: pointer; /* Add this if you want the whole area to show pointer cursor */
+  }
+  
+  .container > canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* pointer-events: none; /* CRITICAL: If canvas is on top and blocks, this might be needed, BUT
+                               then the click must be handled by the .container or .instructions */
+  }
+ 
+  
+  .instructions {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(145deg, rgba(90, 98, 145, 0.98), rgba(60, 65, 100, 1));
+    padding: 12px 22px;
+    border-radius: 20px;
+    border: 4px solid #fff;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Quantico', sans-serif;
+    letter-spacing: 1px;
+    user-select: none;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(120, 100, 255, 0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .instructions:hover {
+    background: linear-gradient(145deg, rgba(90, 98, 145, 1), rgba(60, 65, 100, 1));
+    border-color: rgba(255, 255, 255, 1);
+    transform: translateX(-50%) translateY(-8px) scale(1.08);
+    box-shadow: 
+        0 12px 35px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(150, 130, 255, 0.7),
+        0 0 100px rgba(150, 130, 255, 0.4);
+    color: #ffffff;
+  }
+  
+  .instructions:active {
+    background: linear-gradient(145deg, rgba(80, 88, 135, 1), rgba(50, 55, 90, 1));
+    transform: translateX(-50%) translateY(-4px) scale(1.04);
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(120, 100, 255, 0.6),
+        0 0 80px rgba(120, 100, 255, 0.3);
+  }
+
+  .fadeCircle {
+    /* Make the element the mask's "source" */
+    mask-image: radial-gradient(
+      circle at 55% 55%, /* centre */
+      rgba(0, 0, 0, 1) 0%, /* fully visible in the centre */
+      rgba(0, 0, 0, 1) 40%, /* stay visible for a bit */
+      rgba(0, 0, 0, 0) 65% /* fade to transparent by edge */
+    );
+    mask-mode: alpha; /* use the alpha channel */
+    -webkit-mask-image: radial-gradient(
+      circle at 50% 55%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 0) 65%
+    );
+    /* Ensure the mask applies correctly to the content */
+    /* position: relative; might be needed if children are absolutely positioned
+       and need to be contained by the mask, but usually not for a direct canvas child.
+    */
+  }

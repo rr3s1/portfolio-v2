@@ -3,7 +3,7 @@
 import { SplineScene } from "@/components/ui/spline"
 import  TextRotator from "./classy-hero"
 
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, useCallback } from "react"
 import { GradientTextDemo } from "./gradient-demo"
 import { gsap } from "gsap"
 
@@ -15,6 +15,7 @@ export function SplineSceneBasic() {
   const [countdownStarted, setCountdownStarted] = useState(false)
   const titleRefs = useRef<(HTMLElement | null)[]>([])
   const containerRef = useRef<HTMLDivElement>(null)
+  const counterRef = useRef<HTMLDivElement>(null)
   
   // Function to add elements to refs array
   const addToRefs = (el: HTMLElement | null, index: number) => {
@@ -22,6 +23,54 @@ export function SplineSceneBasic() {
       titleRefs.current[index] = el
     }
   }
+
+  // Function to get color based on counter value
+  const getCounterColor = (count: number) => {
+    switch (count) {
+      case 5: return { bg: 'bg-transparent', text: 'text-red-400', border: 'border-red-400' }
+      case 4: return { bg: 'bg-transparent', text: 'text-orange-400', border: 'border-orange-400' }
+      case 3: return { bg: 'bg-transparent', text: 'text-yellow-400', border: 'border-yellow-400' }
+      case 2: return { bg: 'bg-transparent', text: 'text-blue-400', border: 'border-blue-400' }
+      case 1: return { bg: 'bg-transparent', text: 'text-green-400', border: 'border-green-400' }
+      case 0: return { bg: 'bg-transparent', text: 'text-purple-400', border: 'border-purple-400' }
+      default: return { bg: 'bg-transparent', text: 'text-sky-400', border: 'border-sky-400' }
+    }
+  }
+
+  // Function to animate counter pulsation
+  const animateCounter = useCallback(() => {
+    if (counterRef.current) {
+      gsap.to(counterRef.current, {
+        scale: 1.5,
+        duration: 0.3,
+        ease: "power2.out",
+        yoyo: true,
+        repeat: 1
+      })
+    }
+  }, [])
+
+  const startCountdown = useCallback(() => {
+    setCountdownStarted(true)
+    const countdownInterval = setInterval(() => {
+      setCounter((prev) => {
+        // Trigger animation before changing counter
+        animateCounter()
+        
+        if (prev <= 1) {
+          clearInterval(countdownInterval)
+          // Hide titles and make Spline interactive after final animation
+          setTimeout(() => {
+            setTitlesVisible(false)
+            setSplineInteractive(true)
+            setShowButton(true)
+          }, 600) // Wait for final animation to complete
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+  }, [animateCounter])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -58,24 +107,7 @@ export function SplineSceneBasic() {
       )
     }, 4000)
     return () => clearTimeout(timer)
-  }, [])
-
-  const startCountdown = () => {
-    setCountdownStarted(true)
-    const countdownInterval = setInterval(() => {
-      setCounter((prev) => {
-        if (prev <= 1) {
-          clearInterval(countdownInterval)
-          // Hide titles and make Spline interactive
-          setTitlesVisible(false)
-          setSplineInteractive(true)
-          setShowButton(true)
-          return 0
-        }
-        return prev - 1
-      })
-    }, 1000)
-  }
+  }, [startCountdown])
 
   const toggleTitles = () => {
     if (titlesVisible) {
@@ -159,10 +191,13 @@ export function SplineSceneBasic() {
         </div>
 
         {/* Counter Display - Same position as button */}
-        {!showButton && counter > 0 && countdownStarted && (
+        {!showButton && counter >= 0 && countdownStarted && (
           <div className="absolute left-1/2 -translate-x-1/2 z-30" style={{ top: '5%' }}>
-            <div className="bg-black/50 backdrop-blur-sm rounded-full w-20 h-20 flex items-center justify-center border border-sky-600/30">
-              <span className="text-3xl font-bold text-sky-600 font-quantico">
+            <div 
+              ref={counterRef}
+              className={`bg-transparent rounded-full w-20 h-20 flex items-center justify-center transition-all duration-300 ${getCounterColor(counter).bg} ${getCounterColor(counter).border} border-2`}
+            >
+              <span className={`text-3xl font-bold font-quantico ${getCounterColor(counter).text}`}>
                 {counter}
               </span>
             </div>
@@ -176,7 +211,7 @@ export function SplineSceneBasic() {
               onClick={toggleTitles}
               className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-full font-quantico font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/30"
             >
-              {titlesVisible ? 'Free View Interaction' : 'Show information'}
+              {titlesVisible ? 'Text OFF' : 'Text ON'}
             </button>
           </div>
         )}
