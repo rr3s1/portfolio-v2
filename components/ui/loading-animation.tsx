@@ -32,7 +32,7 @@ const LoadingAnimation: React.FC<LoadingAnimationProps> = ({
         {/* Logo with pulse animation */}
         <div className="relative">
           <Image
-            src="/logoRSnew.png"
+            src="/rslogo.png"
             alt="Loading..."
             width={120}
             height={120}
