@@ -180,13 +180,13 @@ const config = {
         },
         moveHorizontal: {
           '0%': {
-            transform: 'translateX(-50%) translateY(-10%)'
+            transform: 'translateY(-10%)'
           },
           '50%': {
-            transform: 'translateX(50%) translateY(10%)'
+            transform: 'translateY(10%)'
           },
           '100%': {
-            transform: 'translateX(-50%) translateY(-10%)'
+            transform: 'translateY(-10%)'
           }
         },
         

@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   
   /* This is the key for the smooth transition! */
   transition: background-color 0.8s ease-in-out;
+  overflow-x: hidden;
 }
 
 @layer base {
