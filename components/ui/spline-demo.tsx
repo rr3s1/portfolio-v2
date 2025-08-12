@@ -50,6 +50,33 @@ export function SplineSceneBasic() {
     }
   }, [])
 
+  // Function to animate fade-off when counter reaches 0
+  const animateFadeOff = useCallback(() => {
+    if (titleRefs.current.length > 0) {
+      const tl = gsap.timeline({
+        onComplete: () => {
+          setTitlesVisible(false)
+          setSplineInteractive(true)
+          setShowButton(true)
+        }
+      })
+      
+      // Animate all title elements with a subtle stagger
+      tl.to(titleRefs.current.filter(Boolean), {
+        opacity: 0,
+        y: -30,
+        scale: 0.95,
+        filter: "blur(8px)",
+        duration: 1.2,
+        ease: "power2.inOut",
+        stagger: {
+          amount: 0.4,
+          from: "start"
+        }
+      })
+    }
+  }, [])
+
   const startCountdown = useCallback(() => {
     setCountdownStarted(true)
     const countdownInterval = setInterval(() => {
@@ -59,18 +86,16 @@ export function SplineSceneBasic() {
         
         if (prev <= 1) {
           clearInterval(countdownInterval)
-          // Hide titles and make Spline interactive after final animation
+          // Start fade-off animation when counter reaches 0
           setTimeout(() => {
-            setTitlesVisible(false)
-            setSplineInteractive(true)
-            setShowButton(true)
-          }, 600) // Wait for final animation to complete
+            animateFadeOff()
+          }, 600) // Wait for final counter animation to complete
           return 0
         }
         return prev - 1
       })
     }, 1000)
-  }, [animateCounter])
+  }, [animateCounter, animateFadeOff])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -109,15 +134,47 @@ export function SplineSceneBasic() {
     return () => clearTimeout(timer)
   }, [startCountdown])
 
-  const toggleTitles = () => {
-    if (titlesVisible) {
-      // Hide titles
-      setTitlesVisible(false)
-      setSplineInteractive(true)
-    } else {
-      // Show titles
+  // Function to animate titles back in when user clicks 'Exit Interaction'
+  const animateTitlesIn = useCallback(() => {
+    if (titleRefs.current.length > 0) {
+      // First set visibility and z-index
       setTitlesVisible(true)
       setSplineInteractive(false)
+      
+      // Reset any previous transforms and start animation
+      const tl = gsap.timeline()
+      
+      // Set initial state for re-entry
+      tl.set(titleRefs.current.filter(Boolean), {
+        opacity: 0,
+        y: 30,
+        scale: 0.9,
+        filter: "blur(5px)"
+      })
+      
+      // Animate titles back in with stagger
+      tl.to(titleRefs.current.filter(Boolean), {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        filter: "blur(0px)",
+        duration: 1,
+        ease: "power2.out",
+        stagger: {
+          amount: 0.3,
+          from: "start"
+        }
+      })
+    }
+  }, [])
+
+  const toggleTitles = () => {
+    if (titlesVisible) {
+      // Hide titles with fade-off animation
+      animateFadeOff()
+    } else {
+      // Show titles with fade-in animation
+      animateTitlesIn()
     }
   }
 
@@ -135,24 +192,24 @@ export function SplineSceneBasic() {
       <div className="flex flex-col md:flex-row h-full relative">
         {/* Hero Titles - Conditional visibility */}
         <div 
-          className={`absolute top-1/2 left-1/2 -translate-x-1/2 w-full p-8 flex flex-col justify-center items-center bg-transparent transition-all duration-1000 ${
-            titlesVisible ? 'z-20 opacity-100' : 'z-0 opacity-0'
+          className={`absolute top-1/2 left-1/2 -translate-x-1/2 w-full p-8 flex flex-col justify-center items-center bg-transparent ${
+            titlesVisible ? 'z-20' : 'z-0'
           }`} 
           style={{ transform: 'translate(-50%, -70%)' }}
         >
           <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
             <h2
               ref={(el) => addToRefs(el, 0)}
-              className="uppercase tracking-widest mb-3 text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-quantico font-bold text-center text-white-100 opacity-0"
-              style={{ fontFamily: "var(--font-quantico) !important" }}
+              className="uppercase tracking-widest mb-3 text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-quantico font-bold text-center text-white-100"
+              style={{ fontFamily: "var(--font-quantico) !important", opacity: 0 }}
             >
               FULL STACK
             </h2>
 
             <div 
               ref={(el) => addToRefs(el, 1)}
-              className="text-center text-white-100 tracking-widest text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-quantico font-bold [text-shadow:1px_1px_3px_rgba(0,0,0,0.7)] opacity-0"
-              style={{ fontFamily: "var(--font-quantico) !important" }}
+              className="text-center text-white-100 tracking-widest text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-quantico font-bold [text-shadow:1px_1px_3px_rgba(0,0,0,0.7)]"
+              style={{ fontFamily: "var(--font-quantico) !important", opacity: 0 }}
             >
               <GradientTextDemo/>
             </div>
@@ -163,15 +220,16 @@ export function SplineSceneBasic() {
             >
               <span
                 ref={(el) => addToRefs(el, 2)}
-                className="block mb-2 font-quantico font-bold opacity-0"
+                className="block mb-2 font-quantico font-bold"
                 style={{ 
                   textShadow: "2px 2px 3px rgba(0,0,0,0.7)",
-                  fontFamily: "var(--font-quantico) !important"
+                  fontFamily: "var(--font-quantico) !important",
+                  opacity: 0
                 }}
               >
                 Designing&nbsp;&amp;&nbsp;crafting
               </span>
-              <div ref={(el) => addToRefs(el, 3)} className="opacity-0">
+              <div ref={(el) => addToRefs(el, 3)} style={{ opacity: 0 }}>
                 <TextRotator
                   words={[
                     "Apps",
@@ -211,7 +269,7 @@ export function SplineSceneBasic() {
               onClick={toggleTitles}
               className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-full font-quantico font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-white/30"
             >
-              {titlesVisible ? 'Text OFF' : 'Text ON'}
+            {titlesVisible ? 'Enter Interaction' : 'Exit Interaction'}
             </button>
           </div>
         )}
