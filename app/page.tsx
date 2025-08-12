@@ -86,7 +86,7 @@ export default function Home() {
       <FloatingNav navItems={navItems}/>
       
       <main 
-        className="relative w-full transition-colors duration-1000 ease-in-out"
+        className="relative w-full max-w-full overflow-x-hidden transition-colors duration-1000 ease-in-out"
         style={{ backgroundColor: currentBgColor }}
       >
       
