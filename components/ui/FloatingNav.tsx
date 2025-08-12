@@ -32,7 +32,7 @@ export const FloatingNav = ({
       <NavBody>
      
         <NavbarLogo />
-        <NavItems className="text-xl font-regular quantico-regular text-white-100" items={navItems} />
+        <NavItems className="text-sm font-regular quantico-regular text-white-100" items={navItems} />
         <div className="flex items-center gap-4 quantico-regular">
         
           <NavbarButton
