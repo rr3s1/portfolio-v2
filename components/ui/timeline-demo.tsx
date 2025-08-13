@@ -2,6 +2,18 @@ import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 
 export default function TimelineDemo() {
+  const Tech = ({ items }: { items: string[] }) => (
+    <div className="mt-2 flex flex-wrap gap-2" aria-label="Tech stack">
+      {items.map((t) => (
+        <span
+          key={t}
+          className="px-2.5 py-1 text-xs rounded-full border border-white/10 bg-white/5 text-neutral-700 dark:text-neutral-200 shadow-[0_0_6px_rgba(255,255,255,0.08)] backdrop-blur-sm"
+        >
+          {t}
+        </span>
+      ))}
+    </div>
+  );
   const data = [
     {
       title: (
@@ -9,9 +21,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            An interactive and visually-rich personal portfolio built with advanced frontend technologies and 3D animations.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Interactive personal portfolio with 3D visuals, motion‑responsive UI, and reusable components for a smooth browsing experience.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["Next.js", "React", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="https://portfolio-v2-ashy-theta.vercel.app/"
@@ -39,9 +55,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Full-stack beauty clinic management system with appointment scheduling and admin dashboard.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Comprehensive clinic platform for patient profiles, appointment scheduling, medical records, and an admin dashboard with alerts.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Spline", "Appwrite", "Twilio", "Sentry"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="https://auraaesthetics.vercel.app/"
@@ -69,9 +89,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            AI-powered platform for interviews preparation, featuring Vapi AI voice agent and Gemini AI feedback.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            AI‑driven interview prep with voice‑based mock interviews, instant scoring, and actionable feedback.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["Next.js", "Firebase", "Tailwind CSS", "Vapi AI", "shadcn/ui", "Gemini"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="https://ai-interviews-system.vercel.app/"
@@ -99,9 +123,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            High-level AI-driven application that evaluates resumes against job listings, providing ATS scores and tailored feedback.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Smart resume analyzer that matches resumes to job posts, generates ATS scores, and offers tailored improvement tips.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React", "TypeScript", "Vite", "Tailwind CSS", "Puter.js", "Zustand"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -129,9 +157,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Ultra modern hair salon landing page designed to streamline appointment booking, marketing of services and client testimonials using React 19, Spline 3D and GSAP Animations.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Premium salon landing page with booking flows, service showcases, team profiles, and testimonials to drive conversions.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React", "TypeScript", "Tailwind CSS", "GSAP", "Spline", "Convex"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="https://prestige-salon.vercel.app/"
@@ -159,9 +191,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A 3D showcase of an Apple-style product page featuring advanced 3D models, smooth animations and a polished, modern interface.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Product page experience with dynamic 3D model viewing, smooth animations, and an elegant, high‑polish UI.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React", "Tailwind CSS", "GSAP", "Three.js", "R3F"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="https://3d-iphone-gsap.vercel.app/"
@@ -189,9 +225,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A visually scroll-driven website showcasing advanced GSAP animations, parallax effects and video-syncing.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Scroll‑driven storytelling with parallax, pinned sections, synced video playback, and custom animated carousels.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React", "Vite", "Tailwind CSS", "GSAP"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="https://cocktails-gsap-nine.vercel.app/"
@@ -219,9 +259,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            React Native full-stack mobile app featuring search/filters, cart functionality and Google Auth, powered by a scalable backend.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Mobile food ordering with Google sign‑in, rich search and filters, product pages, cart, and a smooth checkout flow.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React Native", "Expo", "TypeScript", "NativeWind", "Appwrite"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -249,9 +293,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A React Native app for browsing trending movies, searching titles and exploring content using the TMDB API.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Movie discovery app featuring lightning‑fast search, trending insights, and clean mobile UI with tab navigation.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React Native", "Expo", "TypeScript", "NativeWind", "Appwrite", "TMDB API"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -280,9 +328,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-          React Native full-stack mobile application for browsing real estate listings, built with a modern, cross-platform technology stack.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Cross‑platform real estate app with Google sign‑in, searchable listings, detail pages, and saved profiles.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React Native", "Expo", "TypeScript", "NativeWind", "Appwrite"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -310,9 +362,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A full-stack patient management system allowing appointment booking, admin management and SMS notifications via Twilio.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Patient scheduling and management with admin workflows, confirmations, cancellations, and automated SMS notifications.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["Next.js", "Appwrite", "TypeScript", "Tailwind CSS", "ShadCN", "Twilio"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -340,9 +396,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A platform for file uploads, management, and sharing, featuring user authentication, file operations and a dashboard.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Upload, organize, share, and download files with auth, global search, sorting, and an insights dashboard.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["Next.js", "React", "TypeScript", "Tailwind CSS", "Appwrite", "ShadCN"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -371,9 +431,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Modern Website inspired by Zentry, featuring scroll-triggered animations, geometric transitions and video storytelling.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Visual experience with scroll‑triggered animations, geometric transitions, and immersive video storytelling.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React", "Tailwind CSS", "GSAP"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -401,9 +465,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Portfolio Landing Page crafted using Next.js, Three.js, Framer Motion and TailwindCSS.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Modern landing page with engaging hero, smooth animations, and clear sections to showcase work and contact info.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["Next.js", "Three.js", "Tailwind CSS", "Framer Motion"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -431,9 +499,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            SaaS Landing Page developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            SaaS landing page with clear product value, feature highlights, social proof, and conversion‑focused CTAs.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React", "Tailwind CSS"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
@@ -461,9 +533,13 @@ export default function TimelineDemo() {
       ),
       content: (
         <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Minimalistic 3D portfolio landing page built with React.js, Three.js and TailwindCSS to demonstrate developer skills.
+          <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            Minimal 3D portfolio focused on concise storytelling, interactive visuals, and fast performance.
           </p>
+          <div className="mb-4">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
+            <Tech items={["React", "Three.js", "Tailwind CSS"]} />
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="#"
