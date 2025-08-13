@@ -155,6 +155,36 @@ export default function TimelineDemo() {
     },
     {
       title: (
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">3D Apple iPhone</span>
+      ),
+      content: (
+        <div className="bg-transparent quantico-regular">
+          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
+            A 3D showcase of an Apple-style product page featuring advanced 3D models, smooth animations and a polished, modern interface.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href="https://3d-iphone-gsap.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-emerald-400 border border-emerald-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(52,211,153,0.25)] hover:bg-emerald-300/10 hover:border-emerald-300/70 hover:shadow-[0_0_16px_rgba(52,211,153,0.45)] focus:outline-none focus:ring-2 focus:ring-emerald-400/40 transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              Live Demo
+            </a>
+            <a
+              href="https://github.com/rr3s1/3D-iPhone15-GSAP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-sky-200 border border-sky-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(56,189,248,0.25)] hover:bg-sky-300/10 hover:border-sky-300/70 hover:shadow-[0_0_16px_rgba(56,189,248,0.45)] focus:outline-none focus:ring-2 focus:ring-orange-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              GitHub Repo
+            </a>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: (
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Cocktails GSAP</span>
       ),
       content: (
@@ -185,12 +215,12 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">FoodDelivery Mobile</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">FoodDelivery Android</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A full-stack mobile app featuring search/filters, cart functionality and Google Auth, powered by a scalable backend.
+            React Native full-stack mobile app featuring search/filters, cart functionality and Google Auth, powered by a scalable backend.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -215,12 +245,12 @@ export default function TimelineDemo() {
     },
     {
       title: (
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">TMDB Moviese Mobile</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">TMDB Movies Android</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A web app for browsing trending movies, searching titles and exploring content using the TMDB API.
+            A React Native app for browsing trending movies, searching titles and exploring content using the TMDB API.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -232,7 +262,7 @@ export default function TimelineDemo() {
               Live Demo
             </a>
             <a
-              href="https://github.com/rr3s1/mobile-movie-app"
+              href="https://github.com/rr3s1/Android-movie-app"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-sky-200 border border-sky-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(56,189,248,0.25)] hover:bg-sky-300/10 hover:border-sky-300/70 hover:shadow-[0_0_16px_rgba(56,189,248,0.45)] focus:outline-none focus:ring-2 focus:ring-orange-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
@@ -243,44 +273,15 @@ export default function TimelineDemo() {
         </div>
       ),
     },
+    
     {
       title: (
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">BookWise Library</span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">RealEstate Android</span>
       ),
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A production-grade library platform with admin/public views, book borrowing workflows and robust user management.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://book-wise-uni-library.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-emerald-400 border border-emerald-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(52,211,153,0.25)] hover:bg-emerald-300/10 hover:border-emerald-300/70 hover:shadow-[0_0_16px_rgba(52,211,153,0.45)] focus:outline-none focus:ring-2 focus:ring-emerald-400/40 transition-all duration-300 transform hover:-translate-y-0.5"
-            >
-              Live Demo
-            </a>
-            <a
-              href="https://github.com/rr3s1/BookWise-Uni-Library"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-sky-200 border border-sky-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(56,189,248,0.25)] hover:bg-sky-300/10 hover:border-sky-300/70 hover:shadow-[0_0_16px_rgba(56,189,248,0.45)] focus:outline-none focus:ring-2 focus:ring-orange-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
-            >
-              GitHub Repo
-            </a>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: (
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">RealEstate Mobile</span>
-      ),
-      content: (
-        <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A full-stack mobile application for browsing real estate listings, built with a modern, cross-platform technology stack.
+          React Native full-stack mobile application for browsing real estate listings, built with a modern, cross-platform technology stack.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -363,36 +364,7 @@ export default function TimelineDemo() {
         </div>
       ),
     },
-    {
-      title: (
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">3D Apple iPhone</span>
-      ),
-      content: (
-        <div className="bg-transparent quantico-regular">
-          <p className="mb-8 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            A 3D showcase of an Apple-style product page featuring advanced 3D models, smooth animations and a polished, modern interface.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://3d-iphone-gsap.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-emerald-400 border border-emerald-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(52,211,153,0.25)] hover:bg-emerald-300/10 hover:border-emerald-300/70 hover:shadow-[0_0_16px_rgba(52,211,153,0.45)] focus:outline-none focus:ring-2 focus:ring-emerald-400/40 transition-all duration-300 transform hover:-translate-y-0.5"
-            >
-              Live Demo
-            </a>
-            <a
-              href="https://github.com/rr3s1/3D-iPhone15-GSAP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-sky-200 border border-sky-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(56,189,248,0.25)] hover:bg-sky-300/10 hover:border-sky-300/70 hover:shadow-[0_0_16px_rgba(56,189,248,0.45)] focus:outline-none focus:ring-2 focus:ring-orange-500/40 transition-all duration-300 transform hover:-translate-y-0.5"
-            >
-              GitHub Repo
-            </a>
-          </div>
-        </div>
-      ),
-    },
+    
     {
       title: (
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6EFFB1] to-[#A594F9]">Zentry Awwwards</span>
@@ -502,7 +474,7 @@ export default function TimelineDemo() {
               Live Demo
             </a>
             <a
-              href="#"
+              href="https://github.com/rr3s1/JSM_3D_ThreeJS_Portfolio"
               aria-disabled="true"
               title="Repository link not provided"
               className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-sky-200 border border-sky-300/40 rounded-full tracking-wider font-semibold opacity-60 cursor-not-allowed pointer-events-none"
