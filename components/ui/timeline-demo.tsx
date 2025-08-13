@@ -22,7 +22,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Interactive personal portfolio with 3D visuals, motion‑responsive UI, and reusable components for a smooth browsing experience.
+            Interactive personal portfolio with 3D visuals, motion‑responsive UI and reusable components for a smooth browsing experience.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -56,7 +56,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Comprehensive clinic platform for patient profiles, appointment scheduling, medical records, and an admin dashboard with alerts.
+            Comprehensive clinic platform for patient profiles, appointment scheduling, medical records and an admin dashboard with alerts.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -90,7 +90,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            AI‑driven interview prep with voice‑based mock interviews, instant scoring, and actionable feedback.
+            AI‑driven interview prep with voice‑based mock interviews, instant scoring and actionable feedback.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -124,7 +124,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Smart resume analyzer that matches resumes to job posts, generates ATS scores, and offers tailored improvement tips.
+            Smart resume analyzer that matches resumes to job posts, generates ATS scores and offers tailored improvement tips.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -158,7 +158,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Premium salon landing page with booking flows, service showcases, team profiles, and testimonials to drive conversions.
+            Premium salon landing page with booking flows, service showcases, team profiles and testimonials to drive conversions.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -192,7 +192,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Product page experience with dynamic 3D model viewing, smooth animations, and an elegant, high‑polish UI.
+            Product page experience with dynamic 3D model viewing, smooth animations and an elegant, high‑polish UI.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -226,7 +226,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Scroll‑driven storytelling with parallax, pinned sections, synced video playback, and custom animated carousels.
+            Scroll‑driven storytelling with parallax, pinned sections, synced video playback and custom animated carousels.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -260,7 +260,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Mobile food ordering with Google sign‑in, rich search and filters, product pages, cart, and a smooth checkout flow.
+            Mobile food ordering with Google sign‑in, rich search and filters, product pages, cart and a smooth checkout flow.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -294,7 +294,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Movie discovery app featuring lightning‑fast search, trending insights, and clean mobile UI with tab navigation.
+            Movie discovery app featuring lightning‑fast search, trending insights and clean mobile UI with tab navigation.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -329,7 +329,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Cross‑platform real estate app with Google sign‑in, searchable listings, detail pages, and saved profiles.
+            Cross‑platform real estate app with Google sign‑in, searchable listings, detail pages and saved profiles.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -363,7 +363,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Patient scheduling and management with admin workflows, confirmations, cancellations, and automated SMS notifications.
+            Patient scheduling and management with admin workflows, confirmations, cancellations and automated SMS notifications.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -397,7 +397,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Upload, organize, share, and download files with auth, global search, sorting, and an insights dashboard.
+            Upload, organize, share, and download files with auth, global search, sorting and an insights dashboard.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -432,7 +432,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Visual experience with scroll‑triggered animations, geometric transitions, and immersive video storytelling.
+            Visual experience with scroll‑triggered animations, geometric transitions and immersive video storytelling.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -466,7 +466,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Modern landing page with engaging hero, smooth animations, and clear sections to showcase work and contact info.
+            Modern landing page with engaging hero, smooth animations and clear sections to showcase work and contact info.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -500,7 +500,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            SaaS landing page with clear product value, feature highlights, social proof, and conversion‑focused CTAs.
+            SaaS landing page with clear product value, feature highlights, social proof and conversion‑focused CTAs.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
@@ -534,7 +534,7 @@ export default function TimelineDemo() {
       content: (
         <div className="bg-transparent quantico-regular">
           <p className="mb-4 quantico-regular font-normal text-neutral-800 text-lg md:text-xl lg:text-2xl dark:text-neutral-200">
-            Minimal 3D portfolio focused on concise storytelling, interactive visuals, and fast performance.
+            Minimal 3D portfolio focused on concise storytelling, interactive visuals and fast performance.
           </p>
           <div className="mb-4">
             <p className="text-sm text-neutral-600 dark:text-neutral-400">Tech Stack</p>
