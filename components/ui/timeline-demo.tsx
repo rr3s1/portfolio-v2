@@ -475,8 +475,8 @@ export default function TimelineDemo() {
             </a>
             <a
               href="https://github.com/rr3s1/JSM_3D_ThreeJS_Portfolio"
-              aria-disabled="true"
-              title="Repository link not provided"
+              aria-disabled="false"
+              title="Repository link"
               className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-sky-200 border border-sky-300/40 rounded-full tracking-wider font-semibold opacity-60 cursor-not-allowed pointer-events-none"
             >
               GitHub Repo
