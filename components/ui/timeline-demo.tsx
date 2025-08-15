@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Timeline } from "@/components/ui/timeline";
 
 export default function TimelineDemo() {
+  const [portfolioButtonState, setPortfolioButtonState] = useState({
+    text: "Live Demo",
+    isClicked: false
+  });
+
+  const handlePortfolioClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    if (portfolioButtonState.isClicked) return;
+    
+    setPortfolioButtonState({
+      text: "Already here :)",
+      isClicked: true
+    });
+    
+    setTimeout(() => {
+      setPortfolioButtonState({
+        text: "Live Demo",
+        isClicked: false
+      });
+    }, 2000);
+  };
+
   const Tech = ({ items }: { items: string[] }) => (
     <div className="mt-2 flex flex-wrap gap-2" aria-label="Tech stack">
       {items.map((t) => (
@@ -29,14 +52,16 @@ export default function TimelineDemo() {
             <Tech items={["Next.js", "React", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion"]} />
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="https://portfolio-v2-ashy-theta.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-transparent text-emerald-400 border border-emerald-300/40 rounded-full tracking-wider font-semibold shadow-[0_0_8px_rgba(52,211,153,0.25)] hover:bg-emerald-300/10 hover:border-emerald-300/70 hover:shadow-[0_0_16px_rgba(52,211,153,0.45)] focus:outline-none focus:ring-2 focus:ring-emerald-400/40 transition-all duration-300 transform hover:-translate-y-0.5"
+            <button
+              onClick={handlePortfolioClick}
+              className={`inline-flex items-center gap-2 px-6 py-3 bg-transparent border rounded-full tracking-wider font-semibold focus:outline-none focus:ring-2 transition-all duration-300 transform hover:-translate-y-0.5 ${
+                portfolioButtonState.isClicked
+                  ? 'text-orange-400 border-orange-300/40 shadow-[0_0_8px_rgba(251,146,60,0.25)] hover:bg-orange-300/10 hover:border-orange-300/70 hover:shadow-[0_0_16px_rgba(251,146,60,0.45)] focus:ring-orange-400/40'
+                  : 'text-emerald-400 border-emerald-300/40 shadow-[0_0_8px_rgba(52,211,153,0.25)] hover:bg-emerald-300/10 hover:border-emerald-300/70 hover:shadow-[0_0_16px_rgba(52,211,153,0.45)] focus:ring-emerald-400/40'
+              }`}
             >
-              Live Demo
-            </a>
+              {portfolioButtonState.text}
+            </button>
             <a
               href="https://github.com/rr3s1/portfolio-v2"
               target="_blank"
