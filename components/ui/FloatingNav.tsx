@@ -77,22 +77,19 @@ export const FloatingNav = ({
               key={`mobile-link-${idx}`}
               href={item.link}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="relative text-neutral-600 dark:text-neutral-300"
+              className="relative px-6 py-3 quantico-regular rounded-full border border-sky-300/40 text-sky-200 shadow-[0_0_8px_rgba(56,189,248,0.25)] hover:bg-sky-300/10 hover:border-sky-300/70 hover:shadow-[0_0_16px_rgba(56,189,248,0.45)] transition-colors duration-200 w-full text-center"
             >
-              <span className="block">{item.name}</span>
+              <span className="block quantico-regular">{item.name}</span>
             </a>
           ))}
-          <div className="flex w-full flex-col gap-4">
-           
-            <NavbarButton
+          <div className="flex w-full flex-col gap-4 mt-2">
+            <a
               onClick={() => setIsMobileMenuOpen(false)}
-              as="a"
               href="#contact"
-              variant="ghost"
-              className="w-full"
+              className="relative px-6 py-3 quantico-regular rounded-full border border-sky-300/40 text-sky-200 shadow-[0_0_8px_rgba(56,189,248,0.25)] hover:bg-sky-300/10 hover:border-sky-300/70 hover:shadow-[0_0_16px_rgba(56,189,248,0.45)] transition-colors duration-200 w-full text-center"
             >
-              Contact
-            </NavbarButton>
+              <span className="block quantico-regular">CONTACT</span>
+            </a>
           </div>
         </MobileNavMenu>
       </MobileNav>
