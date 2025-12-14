@@ -31,7 +31,7 @@
     "maath": "^0.10.8",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.9.2",
-    "next": "14.2.5",
+    "next": "14.2.35",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -51,7 +51,7 @@
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.7",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5",
+    "eslint-config-next": "14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
